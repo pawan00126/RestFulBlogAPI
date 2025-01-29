@@ -30,7 +30,7 @@ public class CommentResource {
 
 	// Create a new comment
 	@POST
-	@Path("/post/{postId}")
+	@Path("/post/{postId}/addComment")
 	@Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	public Response createComment(@PathParam("postId") Long postId, Comment comment) {
@@ -95,7 +95,7 @@ public class CommentResource {
 	
 	// Get a specific comment by ID
 	@GET
-	@Path("/ID={id}")
+	@Path("/get/{id}")
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	public Response getComment(@PathParam("id") Long id) {
 		try {
