@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+<!--        jdbc connection-->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/RestFulBlogAPI</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1234567890</property>
+
+<!--        hibernate settings-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        
+        <mapping class="com.Entity.User"/>
+        <mapping class="com.Entity.Post"/>
+        <mapping class="com.Entity.Comment"/>
+        
+<!--         <mapping class="com.Entity.Token"/> -->
+        
+<!--         <mapping class="com.Entity.Category"/> -->
+
+
+
+    </session-factory>
+</hibernate-configuration>
